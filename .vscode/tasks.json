@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Customize Build",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "&",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "<",
+                "${fileDirname}/input.txt",
+                ">",
+                "${fileDirname}/output.txt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "detail": "Generated task by vscode",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe"
+                }
+            }
+        },
+        {
+            "label": "Build For Debug",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "detail": "Written by GhostedABC",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe"
+                }
+            }
+        }
+    ]
+}
